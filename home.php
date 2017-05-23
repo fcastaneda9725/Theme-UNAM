@@ -1,4 +1,6 @@
 <!-- Archivo principal de página de Wordprees, HOME -->
+<!--Autor: Francisco Castañeda Trujillo-->
+<!--CIDWA 2017-->
 <?php get_header(); ?>
 
 <!-- Listado de post -->
