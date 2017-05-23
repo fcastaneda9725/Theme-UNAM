@@ -1,26 +1,26 @@
 <!-- Archivo principal de página de Wordprees, HOME -->
-<!--Autor: Francisco Castañeda Trujillo-->
+<!--Autores: Francisco Javier Castañeda Trujillo-->
 <!--CIDWA 2017-->
 <?php get_header(); ?>
 
 <!-- Listado de post -->
-<?php if ( have_post() ): ?>
+<?php if ( have_posts() ): ?>
 	<section>
-		<?php while (have_post() ) : the_post(); ?>
+		<?php while (have_posts() ) : the_post(); ?>
 			<article>
 				<header>
-					<h1><a href="<? php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+					<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 					<time datetime="<?php the_time('Y-m-j'); ?>"><?php the_time('j F, Y'); ?></time>
 				</header>
-				<?php the_excerpt();?>
+				<?php the_excerpt(); ?>
 				<footer>
-					<address>Por <?php the_autor_post_link() ?></address>
+					<address>Por <?php the_author_posts_link() ?></address>
 				</footer>
 			</article>
 		<?php endwhile; ?>
 		<div class="pagination">
-			<span class="in-left"><?php next_post_link (' Entradas antiguas'); ?></span>
-			<span class="in-right"><?php previous_post_link ('Entradas Recientes'); ?></span>
+			<span class="in-left"><?php next_posts_link (' Entradas antiguas'); ?></span>
+			<span class="in-right"><?php previous_posts_link ('Entradas Recientes'); ?></span>
 		</div>
 	</section>
 <?php else : ?>
