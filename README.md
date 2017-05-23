@@ -5,4 +5,3 @@ Antes de instalar el theme, hay que instalar Wordpress.
 
 Descargar el código en formato .zip
 
-quiero hacer cambios ahora
