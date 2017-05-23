@@ -8,7 +8,11 @@
  		<h1><?php the_title(); ?></h1>
  		<time datetime="<?php the_time ('Y-m-j'); ?>"><?php the_time('j F, Y'); ?> </time>
  		<?php the_content(); ?>
+ 		<?php the_category(); ?>
+ 		<?php the_tags('<ul><li>','</li><li>','</li></ul>'); ?>
  		<address>Por <?php the_author_posts_link() ?></address>
+ 		<!-- Comentarios -->
+ 		<?php comments_template(); ?>
  	</section>
  <?php else: ?>
  	<p><?php _e('Ups!, esta entrada no existe.') ?></p>

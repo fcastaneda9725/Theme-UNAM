@@ -1,8 +1,9 @@
-<!-- Archivo principal de página de Wordprees, HOME -->
+<!-- Archivo principal de página de Wordpress-->
 <!--Autores: Francisco Javier Castañeda Trujillo-->
 <!--CIDWA 2017-->
 <?php get_header(); ?>
-
+<!-- Autor -->
+<p>Post de <strong><?php echo get_the_author(); ?></strong></p>
 <!-- Listado de post -->
 <?php if ( have_posts() ): ?>
 	<section>
@@ -15,7 +16,6 @@
 				</header>
 				<?php the_excerpt(); ?>
 				<footer>
-					<?php the_tags('<ul><li>','</li><li>','</li></ul>'); ?>
 					<address>Por <?php the_author_posts_link() ?></address>
 				</footer>
 			</article>
@@ -35,3 +35,5 @@
 <!--Archivo de pié de página de Wordpress-->
 <?php get_footer(); ?>
 
+ 
+ 
